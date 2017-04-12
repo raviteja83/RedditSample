@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="@color/cardview_light_background"
+    app:cardCornerRadius="@dimen/cardview_default_radius"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.rt12148.redditsample.AspectImageView
+            android:id="@+id/subreddit_content_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/subreddit_content_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:padding="8dp"
+            tools:text="Hello world"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:divider="?android:attr/listDivider"
+            android:showDividers="middle">
+            <TextView
+                android:id="@+id/subreddit_content_comments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_comments"
+                android:drawableStart="@drawable/ic_comments"
+                android:padding="4dp"
+                android:textSize="14sp"
+                android:drawablePadding="4dp"
+                tools:text="233333"/>
+            <TextView
+                android:id="@+id/subreddit_content_ups"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_thumb_up"
+                android:drawableStart="@drawable/ic_thumb_up"
+                android:padding="4dp"
+                android:textSize="14sp"
+                android:drawablePadding="4dp"
+                tools:text="23333"/>
+
+            <TextView
+                android:id="@+id/subreddit_content_downs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@drawable/ic_thumb_down"
+                android:drawableStart="@drawable/ic_thumb_down"
+                android:padding="4dp"
+                android:textSize="14sp"
+                android:drawablePadding="4dp"
+                tools:text="23333"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>
